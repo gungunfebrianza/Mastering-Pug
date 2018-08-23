@@ -1,0 +1,15 @@
+//-
+  Pug allows you to write inline JavaScript code in your templates.
+  There are three types of code:
+  Unbuffered,
+  Buffered, and
+  Unescaped Buffered.
+
+//- Unbuffered code starts with -. It does not directly add anything to the output.
+- for (var x = 0; x < 3; x++)
+  li item
+
+//-
+  <li>item</li>
+  <li>item</li>
+  <li>item</li>

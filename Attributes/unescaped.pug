@@ -1,2 +1,11 @@
+//-
+  By default, all attributes are escaped—that is,special characters are
+  replaced with escape sequences—to prevent attacks (such as cross site scripting).
+  If you need to use special characters, use != instead of =.
+
 div(escaped="<code>")
 div(unescaped!="<code>")
+
+//-
+  <div escaped="&lt;code&gt;"></div>
+  <div unescaped="<code>"></div>

@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="")
+  body
+    h1 for each
+    each n in [1,2,3,4,5]
+      p= n
+
+    - const grades = {"web": 86, "Design" : 90, "C++" : 100};
+    each key, value in grades
+      p= key + " - " + value
+
+    p#ID test
+    p.class test
+    input(type="text" require)

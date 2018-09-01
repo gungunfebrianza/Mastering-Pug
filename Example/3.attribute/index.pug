@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+  body
+    h1 create attribute
+    input(type="text" name="nama" data-js=`${5 > 2 ? "OK" : "Not OK"}`)
+
+    - const myclasses = ["class1", "class2", "class3"]
+    section(class=myclasses)
+    section.red(class=myclasses)
+
+    - const mystyle = {"color" : "red", "background-color" : "blue"}
+    section(style=mystyle)
+
+    - const myattribute = {"src" : "gidong", "alt" : "gigi bodong"}
+    img&attributes(myattribute)
+
+    input(type="text" disabled)

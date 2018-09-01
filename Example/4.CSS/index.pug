@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="style.css")
+    style.
+      p {
+        color:red;
+      }
+  body
+    - const mystyle = {"text-align" : "center", "text-transform" : "uppercase"}
+    p(style=mystyle) test
+//- p(style="text-align:center; text-transform:uppercase;") test

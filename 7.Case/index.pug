@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title case statement in pug
+  body
+    - const orderstatus = 'ra';
+    
+    case orderstatus
+      when 'pending'
+        p wait ya!
+      when 'in-transit'
+        p on the way!
+      when 'complete'
+        p complete
+      default
+        p we are close now
+        

@@ -1,5 +1,28 @@
+mixin comment(data)
+  .comment
+    if data.postedByAdmin
+      em (posted by admin)
+    .date data.date
+    .author data.author
+    .text data.text
+
 doctype html
-html
+html(lang="en")
   head
+    title Mixin in Pug
+    style.
+      .comment{
+        font-family: sans-serif;
+        line-height: 1.5;
+        padding: 10px;
+        border: 1px solid #555;
+        width: 250px;
+      }
+      .date {font-size: 85%;}
+      .author {font-size: 110%; font-weight: bold;}
+      .text {font-size: 100%;}
   body
-    h1
+    - const c = {postedByAdmin: true, date: '02-20-2019', author: 'qrhista bathok', text: 'quluk quluk'}
+    +comment(c)
+    - const c1 = {date: '02-20-2019', author: 'qrhista bathok', text: 'quluk quluk'}
+    +comment(c1)
